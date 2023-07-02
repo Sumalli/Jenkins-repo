@@ -29,7 +29,7 @@ pipeline {
     }
  post {
         always {
-            echo 'Cleanup everything after each build-process' 
+            echo 'Cleanup Everything' 
         }
     }
 }
