@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Unit test') {
             steps {
-                sh 'echo Running unit tests'
+                sh 'echo Running unit testing'
             }
         }
         stage('coverage') {
