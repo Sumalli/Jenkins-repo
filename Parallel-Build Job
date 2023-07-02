@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    stages {
         stage('parallel-Build Job') {
             parallel(
                     development: {
@@ -12,8 +11,6 @@ pipeline {
                     
                 )
         }
-    
-    }
  post {
         always {
             echo 'Cleanup after everything!'
