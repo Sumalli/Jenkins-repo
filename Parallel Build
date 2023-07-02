@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    stages {
+        stage('parallel-Build Job') {
+            parallel {
+                stage ('development') {
+                    steps {
+                        sh 'echo Running development job'
+                    }
+                }
+                stage ('Production') {
+                    steps {
+                        sh 'echo Running Production Job'
+                    }
+                }
+              
+            }
+        }
+    
+    }
+ post {
+        always {
+            echo 'Cleanup after everything!'
+        }
+    }
+  } 
+}
