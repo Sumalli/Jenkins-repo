@@ -3,22 +3,22 @@ pipeline {
     stages {
         stage('compile') {
             steps {
-                sh 'echo Code Compilation is in progress
+                sh 'echo Code Compilation is in progress'
             }
         }
         stage('review') {
             steps {
-                sh 'echo Code Review is in progress.'
+                sh 'echo Code Review is in progress'
             }
         }
         stage('Unit test') {
             steps {
-                sh 'echo Running unit tests
+                sh 'echo Running unit tests'
             }
         }
         stage('coverage') {
             steps {
-                sh 'echo checks how much code is covered in unit testing
+                sh 'echo checks how much code is covered in unit testing'
             }
         }
         stage('package') {
