@@ -8,7 +8,7 @@ pipeline {
         }
         stage('review') {
             steps {
-                sh 'echo checks for syntax errors and code quality'
+                sh 'echo Code Review checks for syntax errors and code quality '
             }
         }
         stage('Unit test') {
