@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+       stage('Parallel-Build1') {
+            parallel (
+                stage ('development') {
+                    steps {
+                        sh 'echo Running development job'
+                    }
+                }
+                stage ('production') {
+                    steps {
+                        sh 'echo Running production job'
+                    }
+                }
+              
+            )
+        }
+    }
+}
