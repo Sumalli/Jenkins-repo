@@ -1,16 +1,17 @@
 pipeline {
     agent any
-        stage('parallel-Build Job') {
-            parallel(
-                    development: {
+       stage('Parallel-Build Job') {
+            steps {
+                parallel(
+                  development: {
                         sh 'echo Running development job'
                     },
-                    Production: {
+                    production: {
                         sh 'echo Running production job'
                     },
-                    
                 )
-        }
+                
+            }
  post {
         always {
             echo 'Cleanup after everything!'
