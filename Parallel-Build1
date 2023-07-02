@@ -1,8 +1,8 @@
 pipeline {
     agent any
     stages {
-       stage('Parallel-Build1') {
-            parallel (
+        stage('Parallel-Build1 Job') {
+            parallel {
                 stage ('development') {
                     steps {
                         sh 'echo Running development job'
@@ -13,8 +13,12 @@ pipeline {
                         sh 'echo Running production job'
                     }
                 }
-              
-            )
+            }
+        }
+         }
+ post {
+        always {
+            echo 'Cleanup after everything!'
         }
     }
-}
+} 
