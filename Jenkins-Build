@@ -26,11 +26,13 @@ pipeline {
                 sh 'echo generated executable file artifact'
             }
         }
-stage('Email-Notification') {
+stage('Email-Notification'){
+Steps{
     //Some block
 mail bcc: '', body: '''Email Notification for Jenkins Build Job.
 Thanks
 Mallieswari.D''', cc: '', from: '', replyTo: '', subject: 'Jenkins Build Job', to: 'dongarimallieswari29@gmail.com'
+}
 }
 }
 
