@@ -26,20 +26,13 @@ pipeline {
                 sh 'echo generated executable file artifact'
             }
         }
-}
-post {
-  failure {
-    // One or more steps need to be included within each condition's block.
-mail bcc: '', body: '''Email if job is success or Fails.
+stage('Email-Notification') {
+    //Some block
+mail bcc: '', body: '''Email Notification for Jenkins Build Job.
 Thanks
-Mallieswari.D''', cc: '', from: '', replyTo: '', subject: 'parallel build job', to: 'dongarimallieswari29@gmail.com'
-  }
-  fixed {
-    // One or more steps need to be included within each condition's block.
-mail bcc: '', body: '''Email if job is success or Fails.
-Thanks
-Mallieswari.D''', cc: '', from: '', replyTo: '', subject: 'parallel build job', to: 'dongarimallieswari29@gmail.com'
-  }
+Mallieswari.D''', cc: '', from: '', replyTo: '', subject: 'Jenkins Build Job', to: 'dongarimallieswari29@gmail.com'
 }
+}
+
 }
 
