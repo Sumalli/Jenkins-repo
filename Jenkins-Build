@@ -27,14 +27,12 @@ pipeline {
             }
         }
 stage('Email-Notification'){
+steps{
 mail bcc: '', body: 'This is the Maven Build Pipeline process.', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline Job', to: 'dongarimallieswari29@gmail.com'
 }
 
 }
-// post {
-       success {
-          emailext body: 'Email sent from Jenkins', subject: 'Test Email', to: 'dongarimallieswari29@gmail.com'
-        }
-}//
+
+}
 }
 
