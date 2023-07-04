@@ -13,13 +13,15 @@ stages{
                 )
               }
             }
-stage('Email-Notification'){
+        stage('Email-Notification'){
+            steps{
                 mail bcc: '', body: '''Hi...Welcome to Email Alerts
                 Thanks
                 Mallieswari.D''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'dongarimallieswari29@gmail.com'
+                 }
 
-} 
+                                   }  
 
-}
+      }
 
 }
