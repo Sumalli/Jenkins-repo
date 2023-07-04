@@ -28,7 +28,7 @@ pipeline {
         }
     }
  post {
-       always {
+       success {
           emailext body: 'Email sent from Jenkins', subject: 'Test Email', to: 'dongarimallieswari29@gmail.com'
         }
     }
