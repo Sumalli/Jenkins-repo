@@ -13,15 +13,22 @@ stages{
                 )
               }
             }
-        stage('Email-Notification'){
-            steps{
-                mail bcc: '', body: '''Hi...Welcome to Email Alerts
-                Thanks
-                Mallieswari.D''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'dongarimallieswari29@gmail.com'
-                 }
+			}
+       post {
+  failure {
+    // One or more steps need to be included within each condition's block.
+mail bcc: '', body: '''Email if job is success or Fails.
+Thanks
+Mallieswari.D''', cc: '', from: '', replyTo: '', subject: 'parallel build job', to: 'dongarimallieswari29@gmail.com'
+  }
+  fixed {
+    // One or more steps need to be included within each condition's block.
+mail bcc: '', body: '''Email if job is success or Fails.
+Thanks
+Mallieswari.D''', cc: '', from: '', replyTo: '', subject: 'parallel build job', to: 'dongarimallieswari29@gmail.com'
+  }
+}
 
-                                   }  
-
-      }
+ 
 
 }
