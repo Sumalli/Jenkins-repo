@@ -32,7 +32,16 @@ mail bcc: '', body: 'This is the Maven Build Pipeline process.', cc: '', from: '
 }
 
 }
-
+post {
+  failure {
+    // One or more steps need to be included within each condition's block.
+mail bcc: '', body: 'This is the Maven Build Pipeline process.', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline Job', to: 'dongarimallieswari29@gmail.com'
+  }
+  fixed {
+    // One or more steps need to be included within each condition's block.
+mail bcc: '', body: 'This is the Maven Build Pipeline process.', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline Job', to: 'dongarimallieswari29@gmail.com'
+  }
+}
 }
 }
 
