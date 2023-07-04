@@ -28,8 +28,8 @@ pipeline {
         }
     }
  post {
-        always {
-            echo 'Cleanup Everything' 
+       success {
+           emailext body: 'Email sent from Jenkins', recipientProviders: [buildUser()], subject: 'Test Email', to: 'dongarimallieswari29@gmail.com'
         }
     }
 }
