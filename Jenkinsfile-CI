@@ -5,7 +5,7 @@ pipeline {
 	   steps {
                 echo 'compiling..'
 		git URL: 'https://github.com/Sumalli/Jenkins-repo.git'
-		sh script: '/opt/maven/bin/mvn compile
+		sh script: '/opt/maven/bin/mvn compile'
            }
         }
         stage('codereview-pmd') {
@@ -22,7 +22,7 @@ pipeline {
         stage('unit-test) {
 	   steps {
                 echo 'unit test..'
-	        sh script: '/opt/maven/bin/mvn test
+	        sh script: '/opt/maven/bin/mvn test'
                  }
 	   post {
                success {
