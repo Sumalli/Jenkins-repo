@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+    stages {
+        stage('Parallel-Build1 Job') {
+            parallel {
+                stage ('development') {
+                    steps {
+                        sh 'echo Running development job'
+                    }
+                }
+                stage ('production') {
+                    steps {
+                        sh 'echo Running production job'
+                    }
+                }
+            } 
+}
+         stage('Email-Notification'){
+             steps{ 
+                   //Some block
+                 mail bcc: '', body: '''Email Notification for Jenkins Build Job.
+                 Thanks
+                  Mallieswari.D''', cc: '', from: '', replyTo: '', subject: 'Jenkins Build Job', to: 'dongarimallieswari29@gmail.com'
+                  }
+                           }
+   }
+}
+
+
