@@ -37,32 +37,6 @@ pipeline {
            }		
         }
     }
-post {
-  always {
-    // One or more steps need to be included within each condition's block.
-mail bcc: '', body: 'EMAIL ALWAYS...', cc: '', from: '', replyTo: '', subject: 'Jenkins Continuous Integration process Job', to: 'dongarimallieswari29@gmail.com'
-    echo 'ALWAYS'
-  }
-   success {
-    // One or more steps need to be included within each condition's block.
-mail bcc: '', body: 'EMAIL ONLY ON SUCCESS......', cc: '', from: '', replyTo: '', subject: 'Jenkins Continuous Integration process Job', to: 'dongarimallieswari29@gmail.com'
-     echo 'ONLY ON SUCCESS'
-  }
-  failure{
-    // One or more steps need to be included within each condition's block.
-mail bcc: '', body: 'EMAIL ONLY ON FAILURE...', cc: '', from: '', replyTo: '', subject: 'Jenkins Continuous Integration process Job', to: 'dongarimallieswari29@gmail.com'
-     echo 'ONLY ON FAILURE'
-  }
- unstable {
-    // One or more steps need to be included within each condition's block.
-mail bcc: '', body: 'EMAIL ONLY IF RUN IS UNSTABLE...', cc: '', from: '', replyTo: '', subject: 'Jenkins Continuous Integration process Job', to: 'dongarimallieswari29@gmail.com'
-     echo 'ONLY IF RUN IS UNSTABLE'
-  }
-  changed {
-    // One or more steps need to be included within each condition's block.
-mail bcc: '', body: 'EMAIL Only IF STATUS CHANGED FROM SUCCESS TO FAILURE OR VICE VERSA WITH RESPECT TO LAST RUN...', cc: '', from: '', replyTo: '', subject: 'Jenkins Continuous Integration process Job', to: 'dongarimallieswari29@gmail.com'
-     echo 'Only IF STATUS CHANGED FROM SUCCESS TO FAILURE OR VICE VERSA WITH RESPECT TO LAST RUN'
-  }
-  
+
   }
 }
