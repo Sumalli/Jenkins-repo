@@ -4,6 +4,7 @@ pipeline {
         stage('compile') {
 	   steps {
                 echo 'compiling..'
+                 'rm -rf https://github.com/Sumalli/Jenkins-repo.git'
 		git url: 'https://github.com/Sumalli/Jenkins-repo.git'
 		sh script: '/opt/maven/bin/mvn compile'
            }
